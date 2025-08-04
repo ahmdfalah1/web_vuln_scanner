@@ -1,4 +1,4 @@
-#web_vuln_scanner
+# web_vuln_scanner
 
 COMPANY: CODETECH IT SOLUTIONS
 NAME:Ahammed Falah F M
@@ -7,13 +7,13 @@ DOMAIN: Cyber Security And Ethical Hacking
 DURATION: 4 WEEKS 
 MENTOR: NEELA SANTOSH
 
-Web Application Vulnerability Scanner – Project Overview
+# Web Application Vulnerability Scanner – Project Overview
 In today's digital landscape, the security of web applications is more critical than ever. With the increasing number of cyber-attacks targeting websites, it is essential for developers and security professionals to proactively identify and patch vulnerabilities before malicious actors can exploit them. This project introduces a lightweight, Python-based Web Application Vulnerability Scanner designed to detect two of the most common security issues in web applications: SQL Injection (SQLi) and Cross-Site Scripting (XSS).
 
-Purpose and Scope
+# Purpose and Scope
 The goal of this tool is to provide a simple, yet effective scanner that can help developers, testers, and ethical hackers identify potential security flaws in web applications. It focuses specifically on SQL Injection and XSS attacks, both of which are consistently listed in the OWASP Top 10 vulnerabilities. This tool is intended for educational use and security testing on applications where the user has proper authorization.
 
-How It Works
+# How It Works
 The scanner is built using two popular Python libraries:
 
 requests: For sending HTTP requests to target URLs.
@@ -22,13 +22,13 @@ BeautifulSoup (from bs4): For parsing and analyzing HTML content, especially for
 
 When a user inputs a target URL, the scanner performs two types of tests:
 
-SQL Injection Test:
+# SQL Injection Test:
 The scanner appends common SQL injection payloads (e.g., ' OR '1'='1) to query parameters and sends requests to the server. If the server response includes the payload or shows behavior indicative of a successful SQLi (such as database errors or unexpected content), the scanner flags the URL as potentially vulnerable.
 
-XSS Test:
+# XSS Test:
 The scanner uses BeautifulSoup to locate all forms on the web page. It then injects simple JavaScript payloads (like <script>alert('XSS')</script>) into each form input and observes the server's response. If the payload is reflected in the response HTML, it's an indicator of a reflected XSS vulnerability.
 
-Features
+# Features
 Easy-to-use CLI interface.
 
 Lightweight and fast — no external tools or complex setups.
@@ -36,27 +36,4 @@ Lightweight and fast — no external tools or complex setups.
 Easily extendable with additional payloads or modules.
 
 Detects potential vulnerabilities without performing destructive actions.
-
-Use Cases
-Web developers can use it during development to identify and fix vulnerabilities early.
-
-Penetration testers can use it during reconnaissance or vulnerability assessment phases.
-
-Students and learners can understand how common vulnerabilities are detected and exploited.
-
-Limitations
-This scanner is intentionally basic and should not be used as a replacement for comprehensive security tools. It does not support:
-
-Deep crawling across multiple pages
-
-Authentication handling (e.g., login forms, sessions)
-
-Detection of more advanced vulnerabilities (e.g., CSRF, file inclusion)
-
-Additionally, because it uses static payloads, it may produce false negatives if the application uses input filtering or encoding mechanisms.
-
-Disclaimer
-This scanner is meant for ethical use only. Unauthorized scanning or probing of websites is illegal and unethical. Always obtain permission before testing any web application that you do not own.
-
-This tool serves as a foundational project for anyone interested in web security, ethical hacking, or secure software development. It's an excellent starting point for building more advanced vulnerability scanners or integrating security testing into the development lifecycle.
 
