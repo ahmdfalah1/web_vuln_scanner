@@ -1,3 +1,5 @@
+This tool was developed as part of my internship project at CodeTech Solutions. 
+
 # web_vuln_scanner
 
 COMPANY: CODETECH IT SOLUTIONS
